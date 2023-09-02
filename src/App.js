@@ -4,6 +4,7 @@ import { ResultsTable } from "./components/results/ResultsTable";
 
 function App() {
   const calculateHandler = (userInput) => {
+    console.log(userInput);
     // Should be triggered when form is submitted
     // You might not directly want to bind it to the submit event on the form though...
 
@@ -34,7 +35,7 @@ function App() {
     <div>
       <Title />
 
-      <CalculatorForm />
+      <CalculatorForm onSubmit={calculateHandler}/>
 
       {/* Todo: Show below table conditionally (only once result data is available) */}
       {/* Show fallback text if no data is available */}
